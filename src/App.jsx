@@ -113,6 +113,9 @@ function ClientCard({ client }) {
 
 // Avatar Details Component
 function AvatarDetails({ avatar }) {
+  const clients = avatar.clients || [];
+  const clientCount = avatar.client_count || clients.length || 0;
+
   return (
     <div className="mb-6 last:mb-0">
       {/* Avatar Header */}
@@ -129,14 +132,14 @@ function AvatarDetails({ avatar }) {
           </p>
         </div>
         <span className="ml-auto text-xs bg-teal-100 text-teal-700 px-2 py-1 rounded-full">
-          {avatar.clients.length} clients
+          {clientCount} clients
         </span>
       </div>
 
       {/* Clients Grid */}
-      {avatar.clients.length > 0 ? (
+      {clients.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 ml-13">
-          {avatar.clients.map((client, idx) => (
+          {clients.map((client, idx) => (
             <ClientCard key={idx} client={client} />
           ))}
         </div>
@@ -316,6 +319,11 @@ function App() {
           </div>
         </section>
       </main>
+
+      {/* Footer with Version */}
+      <footer className="py-4 text-center text-gray-500 text-sm">
+        <p>Hamo Portal V 1.0.0</p>
+      </footer>
     </div>
   )
 }
