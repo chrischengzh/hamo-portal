@@ -52,7 +52,15 @@ export async function loadProUserDetails(proId) {
   try {
     const response = await fetch(`${API_BASE_URL}/api/portal/pro-users/${proId}/details`);
     const data = await response.json();
-    return data.avatars || [];
+
+    const avatars = data.avatars || [];
+    const clients = data.clients || [];
+
+    // Map clients to their avatars
+    return avatars.map(avatar => ({
+      ...avatar,
+      clients: clients.filter(client => client.avatar_id === avatar.id)
+    }));
   } catch (error) {
     console.error('Failed to load pro user details:', error);
     throw error;
