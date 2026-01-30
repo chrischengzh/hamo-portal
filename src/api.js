@@ -32,7 +32,15 @@ export async function loadProUsers() {
   try {
     const response = await fetch(`${API_BASE_URL}/api/portal/pro-users`);
     const data = await response.json();
-    return data.pro_users || [];
+    // API returns array directly, not wrapped in object
+    const users = Array.isArray(data) ? data : data.pro_users || [];
+    // Map API field names to component field names
+    return users.map(user => ({
+      ...user,
+      avatar_url: user.avatar_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(user.full_name)}&background=random`,
+      last_active: user.last_active || user.created_at,
+      total_clients: user.client_count
+    }));
   } catch (error) {
     console.error('Failed to load pro users:', error);
     throw error;
