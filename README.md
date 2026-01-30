@@ -1,6 +1,9 @@
 # Hamo Portal
 
 Hamo AI 心理治疗平台的门户网站。
+Hamo AI Therapy Avatar Management Portal
+
+## !! The code was written entirely by AI!!
 
 ## 技术栈
 
