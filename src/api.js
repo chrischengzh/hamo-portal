@@ -15,7 +15,12 @@ export async function loadStats() {
   try {
     const response = await fetch(`${API_BASE_URL}/api/portal/stats`);
     const data = await response.json();
-    return data;
+    // Map API field names to component field names
+    return {
+      total_pro_users: data.total_pros,
+      total_avatars: data.total_avatars,
+      total_client_users: data.total_clients
+    };
   } catch (error) {
     console.error('Failed to load stats:', error);
     throw error;
