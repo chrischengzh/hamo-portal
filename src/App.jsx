@@ -322,7 +322,7 @@ function App() {
 
       {/* Footer with Version */}
       <footer className="py-4 text-center text-gray-500 text-sm">
-        <p>Hamo Portal V 1.0.1</p>
+        <p>Hamo Portal V 1.3.0</p>
       </footer>
     </div>
   )
