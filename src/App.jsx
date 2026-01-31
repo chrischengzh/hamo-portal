@@ -130,7 +130,8 @@ function ClientCard({ client }) {
 // Avatar Details Component
 function AvatarDetails({ avatar }) {
   const clients = avatar.clients || [];
-  const clientCount = avatar.client_count || clients.length || 0;
+  // Use actual clients array length, not avatar.client_count from API
+  const clientCount = clients.length;
 
   return (
     <div className="mb-6 last:mb-0">
