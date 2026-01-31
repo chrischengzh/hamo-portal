@@ -90,22 +90,38 @@ function StatsCard({ title, value, icon, color }) {
 
 // Client Card Component
 function ClientCard({ client }) {
+  const isConnected = client.connected_at !== null && client.connected_at !== undefined;
+
   return (
-    <div className="bg-white rounded-lg p-3 border border-gray-200 flex items-center space-x-3">
+    <div className={`rounded-lg p-3 border flex items-center space-x-3 ${
+      isConnected
+        ? 'bg-white border-gray-200'
+        : 'bg-amber-50 border-amber-200'
+    }`}>
       <img
-        src={client.avatar_url}
+        src={client.avatar_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(client.name)}&background=random`}
         alt={client.name}
         className="w-10 h-10 rounded-full bg-gray-200"
       />
       <div className="flex-1 min-w-0">
         <p className="font-medium text-gray-900 text-sm truncate">{client.name}</p>
-        <p className="text-xs text-gray-500">Registered: {formatDate(client.created_at)}</p>
-        <p className="text-xs text-gray-400">Last active: {formatDate(client.last_active)}</p>
+        {isConnected ? (
+          <>
+            <p className="text-xs text-green-600">Connected: {formatDate(client.connected_at)}</p>
+            <p className="text-xs text-gray-400">Last active: {formatDate(client.last_active || client.connected_at)}</p>
+          </>
+        ) : (
+          <p className="text-xs text-amber-600">Pending invitation</p>
+        )}
       </div>
-      {client.is_registered ? (
-        <span className="w-2 h-2 bg-green-500 rounded-full" title="Account linked"></span>
+      {isConnected ? (
+        <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full whitespace-nowrap">
+          Connected
+        </span>
       ) : (
-        <span className="w-2 h-2 bg-gray-300 rounded-full" title="Not registered"></span>
+        <span className="text-xs bg-amber-100 text-amber-700 px-2 py-1 rounded font-mono whitespace-nowrap" title="Invitation Code">
+          {client.invitation_code || 'No code'}
+        </span>
       )}
     </div>
   )
@@ -322,7 +338,7 @@ function App() {
 
       {/* Footer with Version */}
       <footer className="py-4 text-center text-gray-500 text-sm">
-        <p>Hamo Portal V 1.3.0</p>
+        <p>Hamo Portal V 1.3.6</p>
       </footer>
     </div>
   )

@@ -48,6 +48,10 @@ export async function loadProUsers() {
 }
 
 // Load pro user details
+// API now returns clients as AIMindResponse format with:
+// - connected_at: null (pending) or datetime (connected)
+// - invitation_code: shown when not connected
+// - user_id: null (pending) or string (connected)
 export async function loadProUserDetails(proId) {
   try {
     const response = await fetch(`${API_BASE_URL}/api/portal/pro-users/${proId}/details`);
@@ -57,6 +61,7 @@ export async function loadProUserDetails(proId) {
     const clients = data.clients || [];
 
     // Map clients to their avatars
+    // Each client (AI Mind) now includes connected_at and invitation_code
     return avatars.map(avatar => ({
       ...avatar,
       clients: clients.filter(client => client.avatar_id === avatar.id)
