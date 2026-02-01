@@ -153,11 +153,11 @@ function AvatarDetails({ avatar }) {
         </span>
       </div>
 
-      {/* Clients Grid */}
+      {/* Clients Grid - Each AI Mind is unique, use mind id as key */}
       {clients.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 ml-13">
-          {clients.map((client, idx) => (
-            <ClientCard key={idx} client={client} />
+          {clients.map(client => (
+            <ClientCard key={client.id} client={client} />
           ))}
         </div>
       ) : (
