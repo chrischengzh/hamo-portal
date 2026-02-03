@@ -44,6 +44,16 @@ const ClockIcon = () => (
   </svg>
 )
 
+// Profession display mapping
+const professionLabels = {
+  mental_health_professional: 'Mental Health Professional',
+  other: 'Other'
+}
+
+const getProfessionLabel = (profession) => {
+  return professionLabels[profession] || profession || 'Therapist'
+}
+
 // Header Component
 function Header() {
   return (
@@ -201,7 +211,7 @@ function ProUserCard({ user }) {
             />
             <div>
               <h3 className="text-lg font-semibold text-gray-900">{user.full_name}</h3>
-              <p className="text-sm text-gray-500">{user.profession || 'Therapist'}</p>
+              <p className="text-sm text-gray-500">{getProfessionLabel(user.profession)}</p>
             </div>
           </div>
           <button
@@ -339,7 +349,7 @@ function App() {
 
       {/* Footer with Version */}
       <footer className="py-4 text-center text-gray-500 text-sm">
-        <p>Hamo Portal V 1.3.8</p>
+        <p>Hamo Portal V 1.3.9</p>
       </footer>
     </div>
   )
