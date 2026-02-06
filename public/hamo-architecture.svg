@@ -1,0 +1,629 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1100" font-family="'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f1a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="proGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1" />
+      <stop offset="100%" style="stop-color:#8b5cf6" />
+    </linearGradient>
+
+    <linearGradient id="clientGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4" />
+      <stop offset="100%" style="stop-color:#22d3ee" />
+    </linearGradient>
+
+    <linearGradient id="portalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b" />
+      <stop offset="100%" style="stop-color:#fbbf24" />
+    </linearGradient>
+
+    <linearGradient id="umeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981" />
+      <stop offset="100%" style="stop-color:#34d399" />
+    </linearGradient>
+
+    <linearGradient id="llmGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899" />
+      <stop offset="100%" style="stop-color:#f472b6" />
+    </linearGradient>
+
+    <linearGradient id="flowLine1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0">
+        <animate attributeName="stop-opacity" values="0;1;0" dur="3s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" style="stop-color:#6366f1;stop-opacity:1">
+        <animate attributeName="stop-opacity" values="1;1;1" dur="3s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0">
+        <animate attributeName="stop-opacity" values="0;1;0" dur="3s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <linearGradient id="flowLine2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0">
+        <animate attributeName="stop-opacity" values="0;1;0" dur="3s" repeatCount="indefinite" begin="0.5s" />
+      </stop>
+      <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:1">
+        <animate attributeName="stop-opacity" values="1;1;1" dur="3s" repeatCount="indefinite" begin="0.5s" />
+      </stop>
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0">
+        <animate attributeName="stop-opacity" values="0;1;0" dur="3s" repeatCount="indefinite" begin="0.5s" />
+      </stop>
+    </linearGradient>
+
+    <linearGradient id="flowLine3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0">
+        <animate attributeName="stop-opacity" values="0;1;0" dur="3s" repeatCount="indefinite" begin="1s" />
+      </stop>
+      <stop offset="50%" style="stop-color:#f59e0b;stop-opacity:1">
+        <animate attributeName="stop-opacity" values="1;1;1" dur="3s" repeatCount="indefinite" begin="1s" />
+      </stop>
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0">
+        <animate attributeName="stop-opacity" values="0;1;0" dur="3s" repeatCount="indefinite" begin="1s" />
+      </stop>
+    </linearGradient>
+
+    <!-- Glow filters -->
+    <filter id="glowPro" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feFlood flood-color="#6366f1" flood-opacity="0.3" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glowClient" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feFlood flood-color="#06b6d4" flood-opacity="0.3" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glowPortal" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feFlood flood-color="#f59e0b" flood-opacity="0.3" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glowUME" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feFlood flood-color="#10b981" flood-opacity="0.35" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glowLLM" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feFlood flood-color="#ec4899" flood-opacity="0.3" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.3" />
+    </filter>
+
+    <!-- Particle for data flow -->
+    <circle id="particle" r="3" fill="#fff" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.3;0.9" dur="1.5s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Animated dash pattern -->
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="0.5" fill="#ffffff" opacity="0.05" />
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="1100" fill="url(#bgGrad)" rx="0" />
+  <rect width="1400" height="1100" fill="url(#gridPattern)" />
+
+  <!-- Ambient floating particles -->
+  <circle cx="100" cy="200" r="1.5" fill="#6366f1" opacity="0.3">
+    <animate attributeName="cy" values="200;180;200" dur="4s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="4s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="1300" cy="300" r="1" fill="#06b6d4" opacity="0.3">
+    <animate attributeName="cy" values="300;280;300" dur="5s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.3;0.5;0.3" dur="5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="700" cy="100" r="2" fill="#f59e0b" opacity="0.2">
+    <animate attributeName="cy" values="100;85;100" dur="6s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="200" cy="800" r="1.5" fill="#10b981" opacity="0.25">
+    <animate attributeName="cy" values="800;785;800" dur="3.5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="1200" cy="900" r="1" fill="#ec4899" opacity="0.3">
+    <animate attributeName="cy" values="900;880;900" dur="4.5s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Title -->
+  <text x="700" y="55" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="700" letter-spacing="2" opacity="0.95">
+    HAMO AI  -  System Architecture
+    <animate attributeName="opacity" values="0.95;1;0.95" dur="3s" repeatCount="indefinite" />
+  </text>
+  <text x="700" y="80" text-anchor="middle" fill="#94a3b8" font-size="13" font-weight="400" letter-spacing="1">
+    AI-Powered Therapy Avatar Platform
+  </text>
+  <line x1="550" y1="92" x2="850" y2="92" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1" />
+
+  <!-- ==================== USER LAYER ==================== -->
+  <text x="70" y="135" fill="#64748b" font-size="11" font-weight="600" letter-spacing="3" text-transform="uppercase">USERS</text>
+
+  <!-- Therapist User -->
+  <g transform="translate(230,140)" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.6s" begin="0.2s" fill="freeze" />
+    <circle cx="25" cy="20" r="18" fill="none" stroke="#6366f1" stroke-width="1.5" opacity="0.6" />
+    <circle cx="25" cy="15" r="6" fill="#6366f1" opacity="0.7" />
+    <path d="M13 30 Q25 22 37 30" fill="none" stroke="#6366f1" stroke-width="1.5" opacity="0.7" />
+    <text x="25" y="55" text-anchor="middle" fill="#c7d2fe" font-size="12" font-weight="500">Therapist</text>
+  </g>
+
+  <!-- Client User -->
+  <g transform="translate(650,140)" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.6s" begin="0.4s" fill="freeze" />
+    <circle cx="25" cy="20" r="18" fill="none" stroke="#06b6d4" stroke-width="1.5" opacity="0.6" />
+    <circle cx="25" cy="15" r="6" fill="#06b6d4" opacity="0.7" />
+    <path d="M13 30 Q25 22 37 30" fill="none" stroke="#06b6d4" stroke-width="1.5" opacity="0.7" />
+    <text x="25" y="55" text-anchor="middle" fill="#a5f3fc" font-size="12" font-weight="500">Client</text>
+  </g>
+
+  <!-- Admin User -->
+  <g transform="translate(1080,140)" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.6s" begin="0.6s" fill="freeze" />
+    <circle cx="25" cy="20" r="18" fill="none" stroke="#f59e0b" stroke-width="1.5" opacity="0.6" />
+    <circle cx="25" cy="15" r="6" fill="#f59e0b" opacity="0.7" />
+    <path d="M13 30 Q25 22 37 30" fill="none" stroke="#f59e0b" stroke-width="1.5" opacity="0.7" />
+    <text x="25" y="55" text-anchor="middle" fill="#fde68a" font-size="12" font-weight="500">Admin</text>
+  </g>
+
+  <!-- Connection lines from users to apps -->
+  <line x1="255" y1="200" x2="255" y2="260" stroke="#6366f1" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.4">
+    <animate attributeName="stroke-dashoffset" values="0;-8" dur="1s" repeatCount="indefinite" />
+  </line>
+  <line x1="675" y1="200" x2="675" y2="260" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.4">
+    <animate attributeName="stroke-dashoffset" values="0;-8" dur="1s" repeatCount="indefinite" />
+  </line>
+  <line x1="1105" y1="200" x2="1105" y2="260" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.4">
+    <animate attributeName="stroke-dashoffset" values="0;-8" dur="1s" repeatCount="indefinite" />
+  </line>
+
+  <!-- Particles on user-to-app lines -->
+  <circle r="2.5" fill="#6366f1" opacity="0.8">
+    <animate attributeName="cx" values="255;255" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="cy" values="200;260" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0;0.8;0" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <circle r="2.5" fill="#06b6d4" opacity="0.8">
+    <animate attributeName="cx" values="675;675" dur="2s" repeatCount="indefinite" begin="0.7s" />
+    <animate attributeName="cy" values="200;260" dur="2s" repeatCount="indefinite" begin="0.7s" />
+    <animate attributeName="opacity" values="0;0.8;0" dur="2s" repeatCount="indefinite" begin="0.7s" />
+  </circle>
+  <circle r="2.5" fill="#f59e0b" opacity="0.8">
+    <animate attributeName="cx" values="1105;1105" dur="2s" repeatCount="indefinite" begin="1.4s" />
+    <animate attributeName="cy" values="200;260" dur="2s" repeatCount="indefinite" begin="1.4s" />
+    <animate attributeName="opacity" values="0;0.8;0" dur="2s" repeatCount="indefinite" begin="1.4s" />
+  </circle>
+
+  <!-- ==================== FRONTEND LAYER ==================== -->
+  <text x="70" y="285" fill="#64748b" font-size="11" font-weight="600" letter-spacing="3">FRONTEND</text>
+  <rect x="60" y="290" width="60" height="2" rx="1" fill="#64748b" opacity="0.3" />
+
+  <!-- Hamo Pro Card -->
+  <g filter="url(#glowPro)" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.8s" begin="0.3s" fill="freeze" />
+    <rect x="100" y="270" width="310" height="220" rx="16" fill="#1e1e3a" stroke="#6366f1" stroke-width="1" opacity="0.95" />
+    <rect x="100" y="270" width="310" height="50" rx="16" fill="url(#proGrad)" opacity="0.15" />
+    <rect x="100" y="304" width="310" height="1" fill="url(#proGrad)" opacity="0.2" />
+
+    <!-- Header -->
+    <rect x="118" y="282" width="8" height="8" rx="4" fill="#6366f1" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite" />
+    </rect>
+    <text x="134" y="291" fill="#c7d2fe" font-size="15" font-weight="700" letter-spacing="0.5">hamo-pro</text>
+    <text x="360" y="291" text-anchor="end" fill="#6366f1" font-size="10" font-weight="500" opacity="0.7">v1.4.5</text>
+    <text x="134" y="306" fill="#818cf8" font-size="10" opacity="0.6">Therapist Management Platform</text>
+
+    <!-- Tech badges -->
+    <rect x="118" y="320" width="52" height="20" rx="10" fill="#6366f1" fill-opacity="0.15" stroke="#6366f1" stroke-width="0.5" stroke-opacity="0.3" />
+    <text x="144" y="334" text-anchor="middle" fill="#a5b4fc" font-size="9" font-weight="500">React 18</text>
+
+    <rect x="178" y="320" width="36" height="20" rx="10" fill="#6366f1" fill-opacity="0.15" stroke="#6366f1" stroke-width="0.5" stroke-opacity="0.3" />
+    <text x="196" y="334" text-anchor="middle" fill="#a5b4fc" font-size="9" font-weight="500">Vite</text>
+
+    <rect x="222" y="320" width="60" height="20" rx="10" fill="#6366f1" fill-opacity="0.15" stroke="#6366f1" stroke-width="0.5" stroke-opacity="0.3" />
+    <text x="252" y="334" text-anchor="middle" fill="#a5b4fc" font-size="9" font-weight="500">Tailwind</text>
+
+    <!-- Feature list -->
+    <g transform="translate(118,352)">
+      <circle cx="5" cy="5" r="2" fill="#6366f1" opacity="0.6" />
+      <text x="14" y="9" fill="#94a3b8" font-size="10.5">Avatar Creation &amp; Management</text>
+    </g>
+    <g transform="translate(118,370)">
+      <circle cx="5" cy="5" r="2" fill="#6366f1" opacity="0.6" />
+      <text x="14" y="9" fill="#94a3b8" font-size="10.5">Client Profile &amp; AI Mind Setup</text>
+    </g>
+    <g transform="translate(118,388)">
+      <circle cx="5" cy="5" r="2" fill="#6366f1" opacity="0.6" />
+      <text x="14" y="9" fill="#94a3b8" font-size="10.5">Invitation Code &amp; QR Generation</text>
+    </g>
+    <g transform="translate(118,406)">
+      <circle cx="5" cy="5" r="2" fill="#6366f1" opacity="0.6" />
+      <text x="14" y="9" fill="#94a3b8" font-size="10.5">Supervision &amp; Monitoring</text>
+    </g>
+    <g transform="translate(118,424)">
+      <circle cx="5" cy="5" r="2" fill="#6366f1" opacity="0.6" />
+      <text x="14" y="9" fill="#94a3b8" font-size="10.5">Session Feedback (Being/Feeling/Knowing)</text>
+    </g>
+
+    <!-- Subtle breathing animation on border -->
+    <rect x="100" y="270" width="310" height="220" rx="16" fill="none" stroke="#6366f1" stroke-width="1" opacity="0.3">
+      <animate attributeName="stroke-opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite" />
+    </rect>
+  </g>
+
+  <!-- Hamo Client Card -->
+  <g filter="url(#glowClient)" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.8s" begin="0.5s" fill="freeze" />
+    <rect x="520" y="270" width="310" height="220" rx="16" fill="#1e1e3a" stroke="#06b6d4" stroke-width="1" opacity="0.95" />
+    <rect x="520" y="270" width="310" height="50" rx="16" fill="url(#clientGrad)" opacity="0.15" />
+    <rect x="520" y="304" width="310" height="1" fill="url(#clientGrad)" opacity="0.2" />
+
+    <!-- Header -->
+    <rect x="538" y="282" width="8" height="8" rx="4" fill="#06b6d4" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite" begin="0.3s" />
+    </rect>
+    <text x="554" y="291" fill="#a5f3fc" font-size="15" font-weight="700" letter-spacing="0.5">hamo-client</text>
+    <text x="780" y="291" text-anchor="end" fill="#06b6d4" font-size="10" font-weight="500" opacity="0.7">v1.4.5</text>
+    <text x="554" y="306" fill="#67e8f9" font-size="10" opacity="0.6">Client Companion App</text>
+
+    <!-- Tech badges -->
+    <rect x="538" y="320" width="52" height="20" rx="10" fill="#06b6d4" fill-opacity="0.15" stroke="#06b6d4" stroke-width="0.5" stroke-opacity="0.3" />
+    <text x="564" y="334" text-anchor="middle" fill="#a5f3fc" font-size="9" font-weight="500">React 18</text>
+
+    <rect x="598" y="320" width="36" height="20" rx="10" fill="#06b6d4" fill-opacity="0.15" stroke="#06b6d4" stroke-width="0.5" stroke-opacity="0.3" />
+    <text x="616" y="334" text-anchor="middle" fill="#a5f3fc" font-size="9" font-weight="500">Vite</text>
+
+    <rect x="642" y="320" width="60" height="20" rx="10" fill="#06b6d4" fill-opacity="0.15" stroke="#06b6d4" stroke-width="0.5" stroke-opacity="0.3" />
+    <text x="672" y="334" text-anchor="middle" fill="#a5f3fc" font-size="9" font-weight="500">Tailwind</text>
+
+    <!-- Feature list -->
+    <g transform="translate(538,352)">
+      <circle cx="5" cy="5" r="2" fill="#06b6d4" opacity="0.6" />
+      <text x="14" y="9" fill="#94a3b8" font-size="10.5">Multi-Avatar Chat Interface</text>
+    </g>
+    <g transform="translate(538,370)">
+      <circle cx="5" cy="5" r="2" fill="#06b6d4" opacity="0.6" />
+      <text x="14" y="9" fill="#94a3b8" font-size="10.5">Avatar Discovery &amp; Connection</text>
+    </g>
+    <g transform="translate(538,388)">
+      <circle cx="5" cy="5" r="2" fill="#06b6d4" opacity="0.6" />
+      <text x="14" y="9" fill="#94a3b8" font-size="10.5">Invitation Code Registration</text>
+    </g>
+    <g transform="translate(538,406)">
+      <circle cx="5" cy="5" r="2" fill="#06b6d4" opacity="0.6" />
+      <text x="14" y="9" fill="#94a3b8" font-size="10.5">Real-time AI Conversation</text>
+    </g>
+    <g transform="translate(538,424)">
+      <circle cx="5" cy="5" r="2" fill="#06b6d4" opacity="0.6" />
+      <text x="14" y="9" fill="#94a3b8" font-size="10.5">Profile &amp; Settings Management</text>
+    </g>
+
+    <rect x="520" y="270" width="310" height="220" rx="16" fill="none" stroke="#06b6d4" stroke-width="1" opacity="0.3">
+      <animate attributeName="stroke-opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite" begin="0.5s" />
+    </rect>
+  </g>
+
+  <!-- Hamo Portal Card -->
+  <g filter="url(#glowPortal)" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.8s" begin="0.7s" fill="freeze" />
+    <rect x="940" y="270" width="310" height="220" rx="16" fill="#1e1e3a" stroke="#f59e0b" stroke-width="1" opacity="0.95" />
+    <rect x="940" y="270" width="310" height="50" rx="16" fill="url(#portalGrad)" opacity="0.15" />
+    <rect x="940" y="304" width="310" height="1" fill="url(#portalGrad)" opacity="0.2" />
+
+    <!-- Header -->
+    <rect x="958" y="282" width="8" height="8" rx="4" fill="#f59e0b" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite" begin="0.6s" />
+    </rect>
+    <text x="974" y="291" fill="#fde68a" font-size="15" font-weight="700" letter-spacing="0.5">hamo-portal</text>
+    <text x="1200" y="291" text-anchor="end" fill="#f59e0b" font-size="10" font-weight="500" opacity="0.7">v1.3.10</text>
+    <text x="974" y="306" fill="#fbbf24" font-size="10" opacity="0.6">Admin Dashboard</text>
+
+    <!-- Tech badges -->
+    <rect x="958" y="320" width="52" height="20" rx="10" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-width="0.5" stroke-opacity="0.3" />
+    <text x="984" y="334" text-anchor="middle" fill="#fde68a" font-size="9" font-weight="500">React 18</text>
+
+    <rect x="1018" y="320" width="36" height="20" rx="10" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-width="0.5" stroke-opacity="0.3" />
+    <text x="1036" y="334" text-anchor="middle" fill="#fde68a" font-size="9" font-weight="500">Vite</text>
+
+    <rect x="1062" y="320" width="60" height="20" rx="10" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-width="0.5" stroke-opacity="0.3" />
+    <text x="1092" y="334" text-anchor="middle" fill="#fde68a" font-size="9" font-weight="500">Tailwind</text>
+
+    <!-- Feature list -->
+    <g transform="translate(958,352)">
+      <circle cx="5" cy="5" r="2" fill="#f59e0b" opacity="0.6" />
+      <text x="14" y="9" fill="#94a3b8" font-size="10.5">Platform Statistics Dashboard</text>
+    </g>
+    <g transform="translate(958,370)">
+      <circle cx="5" cy="5" r="2" fill="#f59e0b" opacity="0.6" />
+      <text x="14" y="9" fill="#94a3b8" font-size="10.5">Pro User Management</text>
+    </g>
+    <g transform="translate(958,388)">
+      <circle cx="5" cy="5" r="2" fill="#f59e0b" opacity="0.6" />
+      <text x="14" y="9" fill="#94a3b8" font-size="10.5">Avatar &amp; Client Tracking</text>
+    </g>
+    <g transform="translate(958,406)">
+      <circle cx="5" cy="5" r="2" fill="#f59e0b" opacity="0.6" />
+      <text x="14" y="9" fill="#94a3b8" font-size="10.5">Real-time Data Monitoring</text>
+    </g>
+    <g transform="translate(958,424)">
+      <circle cx="5" cy="5" r="2" fill="#f59e0b" opacity="0.6" />
+      <text x="14" y="9" fill="#94a3b8" font-size="10.5">No Auth (Public Read-only)</text>
+    </g>
+
+    <rect x="940" y="270" width="310" height="220" rx="16" fill="none" stroke="#f59e0b" stroke-width="1" opacity="0.3">
+      <animate attributeName="stroke-opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite" begin="1s" />
+    </rect>
+  </g>
+
+  <!-- ==================== API FLOW LINES ==================== -->
+
+  <!-- Pro -> UME -->
+  <path d="M255 490 L255 540 Q255 560 275 560 L470 560 Q490 560 490 580 L490 610" fill="none" stroke="#6366f1" stroke-width="2" stroke-dasharray="6,4" opacity="0.35">
+    <animate attributeName="stroke-dashoffset" values="0;-20" dur="2s" repeatCount="indefinite" />
+  </path>
+  <circle r="3" fill="#6366f1" opacity="0.9">
+    <animate attributeName="cx" values="255;255;275;470;490;490" dur="3s" repeatCount="indefinite" keyTimes="0;0.2;0.3;0.7;0.8;1" />
+    <animate attributeName="cy" values="490;540;560;560;580;610" dur="3s" repeatCount="indefinite" keyTimes="0;0.2;0.3;0.7;0.8;1" />
+    <animate attributeName="opacity" values="0;0.9;0.9;0.9;0.9;0" dur="3s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Client -> UME -->
+  <path d="M675 490 L675 560 Q675 580 695 580 L695 610" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="6,4" opacity="0.35">
+    <animate attributeName="stroke-dashoffset" values="0;-20" dur="2s" repeatCount="indefinite" begin="0.5s" />
+  </path>
+  <circle r="3" fill="#06b6d4" opacity="0.9">
+    <animate attributeName="cx" values="675;675;695;695" dur="2.5s" repeatCount="indefinite" begin="0.5s" keyTimes="0;0.4;0.6;1" />
+    <animate attributeName="cy" values="490;560;580;610" dur="2.5s" repeatCount="indefinite" begin="0.5s" keyTimes="0;0.4;0.6;1" />
+    <animate attributeName="opacity" values="0;0.9;0.9;0" dur="2.5s" repeatCount="indefinite" begin="0.5s" />
+  </circle>
+
+  <!-- Portal -> UME -->
+  <path d="M1095 490 L1095 540 Q1095 560 1075 560 L900 560 Q880 560 880 580 L880 610" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6,4" opacity="0.35">
+    <animate attributeName="stroke-dashoffset" values="0;-20" dur="2s" repeatCount="indefinite" begin="1s" />
+  </path>
+  <circle r="3" fill="#f59e0b" opacity="0.9">
+    <animate attributeName="cx" values="1095;1095;1075;900;880;880" dur="3s" repeatCount="indefinite" begin="1s" keyTimes="0;0.2;0.3;0.7;0.8;1" />
+    <animate attributeName="cy" values="490;540;560;560;580;610" dur="3s" repeatCount="indefinite" begin="1s" keyTimes="0;0.2;0.3;0.7;0.8;1" />
+    <animate attributeName="opacity" values="0;0.9;0.9;0.9;0.9;0" dur="3s" repeatCount="indefinite" begin="1s" />
+  </circle>
+
+  <!-- ==================== REST API Label ==================== -->
+  <g transform="translate(600,545)" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1s" fill="freeze" />
+    <rect x="0" y="0" width="160" height="24" rx="12" fill="#1e1e3a" stroke="#475569" stroke-width="0.5" opacity="0.8" />
+    <text x="80" y="16" text-anchor="middle" fill="#94a3b8" font-size="10" font-weight="500" letter-spacing="1.5">REST API  /  JWT Auth</text>
+  </g>
+
+  <!-- ==================== BACKEND LAYER ==================== -->
+  <text x="70" y="635" fill="#64748b" font-size="11" font-weight="600" letter-spacing="3">BACKEND</text>
+  <rect x="60" y="640" width="60" height="2" rx="1" fill="#64748b" opacity="0.3" />
+
+  <!-- Hamo-UME Card -->
+  <g filter="url(#glowUME)" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.8s" begin="0.9s" fill="freeze" />
+    <rect x="200" y="620" width="1000" height="240" rx="20" fill="#1a2332" stroke="#10b981" stroke-width="1.5" opacity="0.95" />
+
+    <!-- Header bar -->
+    <rect x="200" y="620" width="1000" height="55" rx="20" fill="url(#umeGrad)" opacity="0.1" />
+    <rect x="200" y="659" width="1000" height="1" fill="url(#umeGrad)" opacity="0.15" />
+
+    <!-- Header content -->
+    <rect x="228" y="636" width="10" height="10" rx="5" fill="#10b981" opacity="0.8">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="1.5s" repeatCount="indefinite" />
+    </rect>
+    <text x="248" y="647" fill="#6ee7b7" font-size="18" font-weight="700" letter-spacing="0.5">hamo-ume</text>
+    <text x="380" y="647" fill="#34d399" font-size="11" opacity="0.6">Unified Mind Engine</text>
+    <text x="1150" y="647" text-anchor="end" fill="#10b981" font-size="10" font-weight="500" opacity="0.7">v1.4.5  |  FastAPI + Python</text>
+
+    <!-- Service Modules -->
+    <!-- Auth Service -->
+    <g transform="translate(228,675)">
+      <rect x="0" y="0" width="170" height="80" rx="10" fill="#10b981" fill-opacity="0.06" stroke="#10b981" stroke-width="0.5" stroke-opacity="0.2" />
+      <text x="12" y="20" fill="#6ee7b7" font-size="11" font-weight="600">Auth Service</text>
+      <text x="12" y="36" fill="#64748b" font-size="9">JWT Token Management</text>
+      <text x="12" y="50" fill="#64748b" font-size="9">Pro &amp; Client Login</text>
+      <text x="12" y="64" fill="#64748b" font-size="9">Token Refresh (24h/7d)</text>
+    </g>
+
+    <!-- User Service -->
+    <g transform="translate(415,675)">
+      <rect x="0" y="0" width="170" height="80" rx="10" fill="#10b981" fill-opacity="0.06" stroke="#10b981" stroke-width="0.5" stroke-opacity="0.2" />
+      <text x="12" y="20" fill="#6ee7b7" font-size="11" font-weight="600">User Service</text>
+      <text x="12" y="36" fill="#64748b" font-size="9">Pro/Client Profiles</text>
+      <text x="12" y="50" fill="#64748b" font-size="9">Role-Based Access</text>
+      <text x="12" y="64" fill="#64748b" font-size="9">Registration Flow</text>
+    </g>
+
+    <!-- Avatar Service -->
+    <g transform="translate(602,675)">
+      <rect x="0" y="0" width="170" height="80" rx="10" fill="#10b981" fill-opacity="0.06" stroke="#10b981" stroke-width="0.5" stroke-opacity="0.2" />
+      <text x="12" y="20" fill="#6ee7b7" font-size="11" font-weight="600">Avatar Service</text>
+      <text x="12" y="36" fill="#64748b" font-size="9">CRUD Operations</text>
+      <text x="12" y="50" fill="#64748b" font-size="9">Discovery &amp; Search</text>
+      <text x="12" y="64" fill="#64748b" font-size="9">Connection Management</text>
+    </g>
+
+    <!-- AI Mind Service -->
+    <g transform="translate(789,675)">
+      <rect x="0" y="0" width="170" height="80" rx="10" fill="#10b981" fill-opacity="0.06" stroke="#10b981" stroke-width="0.5" stroke-opacity="0.2" />
+      <text x="12" y="20" fill="#6ee7b7" font-size="11" font-weight="600">AI Mind Service</text>
+      <text x="12" y="36" fill="#64748b" font-size="9">Personality (Big Five)</text>
+      <text x="12" y="50" fill="#64748b" font-size="9">Emotion &amp; Cognition</text>
+      <text x="12" y="64" fill="#64748b" font-size="9">Supervision Feedback</text>
+    </g>
+
+    <!-- Invitation Service -->
+    <g transform="translate(976,675)">
+      <rect x="0" y="0" width="195" height="80" rx="10" fill="#10b981" fill-opacity="0.06" stroke="#10b981" stroke-width="0.5" stroke-opacity="0.2" />
+      <text x="12" y="20" fill="#6ee7b7" font-size="11" font-weight="600">Invitation Service</text>
+      <text x="12" y="36" fill="#64748b" font-size="9">Code Generation</text>
+      <text x="12" y="50" fill="#64748b" font-size="9">QR Code Validation</text>
+      <text x="12" y="64" fill="#64748b" font-size="9">Client-Avatar Linking</text>
+    </g>
+
+    <!-- Data Layer -->
+    <g transform="translate(228,770)">
+      <rect x="0" y="0" width="943" height="42" rx="8" fill="#0f1923" stroke="#10b981" stroke-width="0.5" stroke-opacity="0.4" stroke-dasharray="4,4" />
+      <text x="20" y="26" fill="#34d399" font-size="10" font-weight="500" opacity="0.7">DATA LAYER</text>
+      <text x="130" y="26" fill="#475569" font-size="9">In-Memory Storage  |  Users DB  |  Avatars DB  |  AI Minds DB  |  Connections DB  |  Invitations DB  |  Feedback DB</text>
+    </g>
+
+    <!-- Breathing border -->
+    <rect x="200" y="620" width="1000" height="240" rx="20" fill="none" stroke="#10b981" stroke-width="1.5" opacity="0.3">
+      <animate attributeName="stroke-opacity" values="0.3;0.5;0.3" dur="3s" repeatCount="indefinite" />
+    </rect>
+  </g>
+
+  <!-- ==================== LLM LAYER ==================== -->
+
+  <!-- UME -> LLM Connection -->
+  <path d="M700 860 L700 900 Q700 920 700 920 L700 940" fill="none" stroke="#ec4899" stroke-width="2" stroke-dasharray="6,4" opacity="0.35">
+    <animate attributeName="stroke-dashoffset" values="0;-20" dur="2s" repeatCount="indefinite" />
+  </path>
+  <circle r="3" fill="#ec4899" opacity="0.9">
+    <animate attributeName="cx" values="700;700" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="cy" values="860;940" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0;0.9;0" dur="2s" repeatCount="indefinite" />
+  </circle>
+
+  <text x="70" y="965" fill="#64748b" font-size="11" font-weight="600" letter-spacing="3">AI ENGINE</text>
+  <rect x="60" y="970" width="60" height="2" rx="1" fill="#64748b" opacity="0.3" />
+
+  <!-- LLM Card -->
+  <g filter="url(#glowLLM)" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.8s" begin="1.1s" fill="freeze" />
+    <rect x="400" y="940" width="600" height="100" rx="16" fill="#1e1e3a" stroke="#ec4899" stroke-width="1" opacity="0.95" />
+    <rect x="400" y="940" width="600" height="40" rx="16" fill="url(#llmGrad)" opacity="0.1" />
+    <rect x="400" y="968" width="600" height="1" fill="url(#llmGrad)" opacity="0.15" />
+
+    <!-- Header -->
+    <rect x="420" y="952" width="8" height="8" rx="4" fill="#ec4899" opacity="0.8">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="1.2s" repeatCount="indefinite" />
+    </rect>
+    <text x="436" y="962" fill="#f9a8d4" font-size="14" font-weight="700">LLM Backend</text>
+    <text x="560" y="962" fill="#ec4899" font-size="10" opacity="0.6">AI Conversation Engine</text>
+
+    <!-- Features inline -->
+    <g transform="translate(420,980)">
+      <rect x="0" y="0" width="130" height="44" rx="8" fill="#ec4899" fill-opacity="0.06" stroke="#ec4899" stroke-width="0.5" stroke-opacity="0.2" />
+      <text x="12" y="18" fill="#f9a8d4" font-size="10" font-weight="600">Claude API</text>
+      <text x="12" y="34" fill="#64748b" font-size="9">Anthropic LLM</text>
+    </g>
+    <g transform="translate(565,980)">
+      <rect x="0" y="0" width="130" height="44" rx="8" fill="#ec4899" fill-opacity="0.06" stroke="#ec4899" stroke-width="0.5" stroke-opacity="0.2" />
+      <text x="12" y="18" fill="#f9a8d4" font-size="10" font-weight="600">Therapy Context</text>
+      <text x="12" y="34" fill="#64748b" font-size="9">AI Mind Profiles</text>
+    </g>
+    <g transform="translate(710,980)">
+      <rect x="0" y="0" width="130" height="44" rx="8" fill="#ec4899" fill-opacity="0.06" stroke="#ec4899" stroke-width="0.5" stroke-opacity="0.2" />
+      <text x="12" y="18" fill="#f9a8d4" font-size="10" font-weight="600">Response Gen</text>
+      <text x="12" y="34" fill="#64748b" font-size="9">Avatar Personality</text>
+    </g>
+    <g transform="translate(855,980)">
+      <rect x="0" y="0" width="120" height="44" rx="8" fill="#ec4899" fill-opacity="0.06" stroke="#ec4899" stroke-width="0.5" stroke-opacity="0.2" />
+      <text x="12" y="18" fill="#f9a8d4" font-size="10" font-weight="600">Session Memory</text>
+      <text x="12" y="34" fill="#64748b" font-size="9">Chat History</text>
+    </g>
+
+    <rect x="400" y="940" width="600" height="100" rx="16" fill="none" stroke="#ec4899" stroke-width="1" opacity="0.3">
+      <animate attributeName="stroke-opacity" values="0.3;0.5;0.3" dur="3s" repeatCount="indefinite" begin="0.5s" />
+    </rect>
+  </g>
+
+  <!-- ==================== DATA FLOW LEGEND ==================== -->
+  <g transform="translate(70,940)" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.6s" begin="1.3s" fill="freeze" />
+    <rect x="0" y="0" width="240" height="100" rx="12" fill="#1a1a2e" stroke="#334155" stroke-width="0.5" opacity="0.8" />
+    <text x="16" y="22" fill="#94a3b8" font-size="10" font-weight="600" letter-spacing="1">DATA FLOW</text>
+
+    <!-- Invitation Flow -->
+    <line x1="16" y1="38" x2="50" y2="38" stroke="#6366f1" stroke-width="2" stroke-dasharray="4,3">
+      <animate attributeName="stroke-dashoffset" values="0;-7" dur="1s" repeatCount="indefinite" />
+    </line>
+    <circle cx="56" cy="38" r="2" fill="#6366f1" />
+    <text x="66" y="42" fill="#94a3b8" font-size="9">Pro creates invitation</text>
+
+    <!-- Chat Flow -->
+    <line x1="16" y1="56" x2="50" y2="56" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,3">
+      <animate attributeName="stroke-dashoffset" values="0;-7" dur="1s" repeatCount="indefinite" />
+    </line>
+    <circle cx="56" cy="56" r="2" fill="#06b6d4" />
+    <text x="66" y="60" fill="#94a3b8" font-size="9">Client chats with avatar</text>
+
+    <!-- Monitor Flow -->
+    <line x1="16" y1="74" x2="50" y2="74" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4,3">
+      <animate attributeName="stroke-dashoffset" values="0;-7" dur="1s" repeatCount="indefinite" />
+    </line>
+    <circle cx="56" cy="74" r="2" fill="#f59e0b" />
+    <text x="66" y="78" fill="#94a3b8" font-size="9">Portal monitors stats</text>
+
+    <!-- AI Flow -->
+    <line x1="16" y1="90" x2="50" y2="90" stroke="#ec4899" stroke-width="2" stroke-dasharray="4,3">
+      <animate attributeName="stroke-dashoffset" values="0;-7" dur="1s" repeatCount="indefinite" />
+    </line>
+    <circle cx="56" cy="90" r="2" fill="#ec4899" />
+    <text x="66" y="94" fill="#94a3b8" font-size="9">AI generates responses</text>
+  </g>
+
+  <!-- ==================== DEPLOYMENT INFO ==================== -->
+  <g transform="translate(1140,940)" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.6s" begin="1.3s" fill="freeze" />
+    <rect x="0" y="0" width="190" height="100" rx="12" fill="#1a1a2e" stroke="#334155" stroke-width="0.5" opacity="0.8" />
+    <text x="16" y="22" fill="#94a3b8" font-size="10" font-weight="600" letter-spacing="1">DEPLOYMENT</text>
+
+    <text x="16" y="42" fill="#64748b" font-size="9">Frontend</text>
+    <text x="90" y="42" fill="#94a3b8" font-size="9" font-weight="500">Vercel</text>
+
+    <text x="16" y="58" fill="#64748b" font-size="9">Backend</text>
+    <text x="90" y="58" fill="#94a3b8" font-size="9" font-weight="500">AWS EB / Vercel</text>
+
+    <text x="16" y="74" fill="#64748b" font-size="9">API Base</text>
+    <text x="90" y="74" fill="#94a3b8" font-size="9" font-weight="500">api.hamo.ai</text>
+
+    <text x="16" y="90" fill="#64748b" font-size="9">Protocol</text>
+    <text x="90" y="90" fill="#94a3b8" font-size="9" font-weight="500">HTTPS + CORS</text>
+  </g>
+
+  <!-- ==================== INTER-APP COMMUNICATION ==================== -->
+  <!-- Pro <-> Client (via invitation) -->
+  <path d="M410 380 Q465 350 520 380" fill="none" stroke="#a78bfa" stroke-width="1" stroke-dasharray="3,3" opacity="0.3">
+    <animate attributeName="stroke-dashoffset" values="0;-12" dur="2s" repeatCount="indefinite" />
+  </path>
+  <text x="465" y="363" text-anchor="middle" fill="#a78bfa" font-size="8" opacity="0.5">Invitation Code</text>
+
+  <!-- Footer -->
+  <text x="700" y="1080" text-anchor="middle" fill="#334155" font-size="10" letter-spacing="1">
+    HAMO AI  |  AI-Powered Therapy Avatar Platform  |  Architecture v1.0
+  </text>
+</svg>

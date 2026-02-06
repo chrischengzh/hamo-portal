@@ -325,7 +325,7 @@ function App() {
         </section>
 
         {/* Pro Users List Section */}
-        <section>
+        <section className="mb-8">
           <h2 className="text-xl font-semibold text-gray-900 mb-4">Pro Users</h2>
           <div className="space-y-4">
             {loading ? (
@@ -345,11 +345,23 @@ function App() {
             )}
           </div>
         </section>
+
+        {/* System Architecture Section */}
+        <section>
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">Hamo AI - System Architecture</h2>
+          <div className="bg-white rounded-xl shadow-md overflow-hidden">
+            <img
+              src="/hamo-architecture.svg"
+              alt="Hamo AI System Architecture"
+              className="w-full h-auto"
+            />
+          </div>
+        </section>
       </main>
 
       {/* Footer with Version */}
       <footer className="py-4 text-center text-gray-500 text-sm">
-        <p>Hamo Portal V 1.3.9</p>
+        <p>Hamo Portal V 1.4.5</p>
       </footer>
     </div>
   )
