@@ -348,7 +348,7 @@ function App() {
 
         {/* System Architecture Section */}
         <section>
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Hamo AI - System Architecture</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">System Architecture</h2>
           <div className="bg-white rounded-xl shadow-md overflow-hidden">
             <img
               src="/hamo-architecture.svg"
